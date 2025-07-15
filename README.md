@@ -22,30 +22,26 @@ Component-Based Architecture is a software design paradigm where the application
 
 ```
 cba-jigsaw/
-├── component-a/
+├── service/
 │   ├── src/
-│   │   └── main/java/
-│   └── module-info.java
-├── component-b/
+│       └── main/java/
+│           └── module-info.java
+├── application/
 │   ├── src/
-│   │   └── main/java/
-│   └── module-info.java
-├── app/
-│   ├── src/
-│   │   └── main/java/
-│   └── module-info.java
+│       └── main/java/
+│           └── module-info.java
 ├── README.md
 └── ...
 ```
 
-- **component-a/**, **component-b/**: Example modules representing individual components.
-- **app/**: The main application module that consumes the components.
+- **service**: Example module representing a individual component.
+- **application/**: The main application module that consumes the component.
 
 ## Getting Started
 
 1. **Requirements**
    - Java 9 or newer (for JPMS support)
-   - Maven or Gradle (recommended for building multi-module projects)
+   - Maven
 
 2. **Building the Project**
 
@@ -54,14 +50,9 @@ cba-jigsaw/
    mvn clean install
    ```
 
-   If using Gradle:
-   ```sh
-   gradle build
-   ```
-
 3. **Running the Application**
 
-   Navigate to the `app` module and run the main class as defined in its `module-info.java`.
+   Navigate to the `application` module and run the main class as defined in its `module-info.java`.
 
 ## Example: Declaring a Module
 
